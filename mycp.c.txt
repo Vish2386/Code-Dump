@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    FILE *fptr1, *fptr2;
+    char filename[100];
+    int c; // Using int to correctly handle EOF
+
+    // 1. Open Source File
+    printf("Enter the source filename to open for reading: ");
+    scanf("%s", filename);
+
+    fptr1 = fopen(filename, "r");
+    if (fptr1 == NULL) {
+        printf("Error: Cannot open source file %s\n", filename);
+        exit(1);
+    }
+
+    // 2. Open Destination File
+    printf("Enter the destination filename to open for writing: ");
+    scanf("%s", filename);
+
+    fptr2 = fopen(filename, "w");
+    if (fptr2 == NULL) {
+        printf("Error: Cannot open destination file %s\n", filename);
+        fclose(fptr1); // Clean up the first pointer
+        exit(1);
+    }
+
+    // 3. The Copy Mechanism (Streaming characters)
+    c = fgetc(fptr1);
+    while (c != EOF) {
+        fputc(c, fptr2);
+        c = fgetc(fptr1);
+    }
+
+    printf("\nContents copied successfully to the destination file.\n");
+
+    // 4. Close Files
+    fclose(fptr1);
+    fclose(fptr2);
+
+    return 0;
+}

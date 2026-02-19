@@ -1,0 +1,37 @@
+#!/bin/bash
+
+echo "=========================================="
+echo "      LINUX SYSTEM MONITORING SCRIPT      "
+echo "=========================================="
+
+# a. OS version, release number, and kernel version
+echo "--- OS and Kernel Information ---"
+echo "Kernel Version: $(uname -r)"
+echo "OS Release Info:"
+cat /etc/os-release | grep -E "PRETTY_NAME|VERSION="
+echo ""
+
+# b. Top 10 processes in descending order (by CPU usage)
+echo "--- Top 10 Processes (CPU Usage) ---"
+ps -eo pid,ppid,cmd,%cpu --sort=-%cpu | head -n 11
+echo ""
+
+# c. Processes with highest memory usage
+echo "--- Top 5 Processes (Memory Usage) ---"
+ps -eo pid,ppid,cmd,%mem --sort=-%mem | head -n 6
+echo ""
+
+# d. Current logged-in user and log name
+echo "--- User Information ---"
+echo "Current User: $(whoami)"
+echo "Log Name: $LOGNAME"
+echo ""
+
+# e. Shell, Home, OS Type, Path, and Working Directory
+echo "--- Environment & Shell Settings ---"
+echo "Current Shell: $SHELL"
+echo "Home Directory: $HOME"
+echo "Operating System Type: $OSTYPE"
+echo "Current Path: $PATH"
+echo "Current Working Directory: $(pwd)"
+echo "=========================================="

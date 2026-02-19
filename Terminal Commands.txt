@@ -1,0 +1,27 @@
+# Linux Command Reference Guide
+
+| S.No | Command | Meaning / Purpose | Source |
+|:-----|:--------|:------------------|:-------|
+| 1    | pwd     | Finds the path of the current working directory. [cite_start]| [cite: 2] |
+| 2    | mkdir   | Creates a new directory. [cite_start]| [cite: 2] |
+| 3    | cd      | Opens a specific directory. [cite_start]| [cite: 2] |
+| 4    | ls      | Views the contents of a directory (includes -R for sub-directories, -a for hidden files, and -al for details). [cite_start]| [cite: 2] |
+| 5    | cat     | Creates files, appends data to existing files, or joins multiple files together. [cite_start]| [cite: 2] |
+| 6    | cp      | Copies files from one directory to another. [cite_start]| [cite: 2] |
+| 7    | mv      | Renames files or moves them to a new location. [cite_start]| [cite: 3] |
+| 8    | rmdir   | Deletes empty directories. [cite_start]| [cite: 3] |
+| 9    | rm      | Deletes directories and all contents within them. [cite_start]| [cite: 3] |
+| 10   | touch   | Creates multiple blank files. [cite_start]| [cite: 3] |
+| 11   | grep    | Searches for a specific word or pattern within a file. [cite_start]| [cite: 3] |
+| 12   | df      | Generates a report on system disk space usage. [cite_start]| [cite: 3] |
+| 13   | du      | Checks how much disk space a specific file or directory occupies. [cite_start]| [cite: 3] |
+| 14   | head    | Views the first few lines of a text file. [cite_start]| [cite: 3, 4] |
+| 15   | tail    | Displays the last few lines of a text file. [cite_start]| [cite: 4] |
+| 16   | chmod   | Changes read, write, and execute permissions of files and directories. [cite_start]| [cite: 4] |
+| 17   | tree    | Displays directory contents in a hierarchical tree format. [cite_start]| [cite: 4] |
+| 18   | wc      | Checks line count, word count, and character count in a file. [cite_start]| [cite: 4] |
+| 19   | chown   | Changes the file owner and group permissions. [cite_start]| [cite: 4] |
+| 20   | chgrp   | Changes the group ownership of a file or directory. [cite_start]| [cite: 4] |
+| 21   | ls -l   | Lists files/directories in long format with detailed information (size, owner, etc.). [cite_start]| [cite: 5] |
+| 22   | groupadd| Creates a new group on the system with a specified name. [cite_start]| [cite: 5] |
+| 23   | useradd | Creates a new user account on the system with a specified username. [cite_start]| [cite: 5] |
